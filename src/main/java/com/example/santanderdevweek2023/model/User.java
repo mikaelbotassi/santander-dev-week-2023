@@ -14,6 +14,15 @@ public class User {
     private Account account;
     @OneToOne(cascade = CascadeType.ALL)
     private Card card;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Feature> features;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
